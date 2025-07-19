@@ -22,14 +22,26 @@
    - Issue: The header layout was not optimized for mobile screens.
    - Fix: Kept the square logo of the company but hid the company name in mobile view to ensure a cleaner and more user-friendly interface. This way, there were no clutter and overlapping elements on smaller screens.
 
-### [Another Component Name]
 
-1. ...
-   - Issue: ...
-   - Fix: ...
-2. ...
-   - Issue: ...
-   - Fix: ...
-3. ...
-   - Issue: ...
-   - Fix: ...
+### App.tsx (Box Area Component)
+
+1. Search button in search bar wasn't visually appealing
+   - Issue: The search button did not have a rounded appearance, making it look out of place.
+   - Fix: Added className="rounded-full" to the Button component to give it a rounded appearance, enhancing the overall design.
+
+### App.tsx
+
+1. After the for tag list component, there was no padding below
+   - Issue: The layout looked cramped as there was no padding below the tag list component.
+   - Fix: Added a padding of 12 at bottom to the TagList component to provide adequate spacing and ensure a clean layout.
+
+
+### App.tsx (TagList Component)
+
+1. Missing prop types
+   - Issue: The TagList component did not have prop types defined, which could lead to potential type errors.
+   - Fix: Added prop types to the TagList component to ensure type safety and better code maintainability.
+
+2. Unused setTags function
+   - Issue: The setTags function was defined but not used, leading to unnecessary code.
+   - Fix: Removed the setTags function from the component as it was not needed.

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
-function TagList({ title, tags }) {
+function TagList({ title, tags }: { title: string; tags: string[] }) {
   return (
     <div className="mt-8 px-6 max-w-5xl mx-auto">
       <div className="text-white text-lg font-semibold mb-4">{title}</div>
@@ -69,7 +69,7 @@ function BoxArea108({
         placeholder="Type to search..."
         className="flex-1 bg-transparent border-none text-white placeholder:text-gray-400 focus:ring-0"
       />
-      <Button className="bg-blue-600 hover:bg-blue-700 text-white ml-4">
+      <Button className="bg-blue-600 hover:bg-blue-700 text-white ml-4 rounded-full">
         Search
       </Button>
     </div>
@@ -82,7 +82,9 @@ function Header() {
     <header className="flex items-center justify-between px-6 py-4 bg-black border-b border-gray-800">
       <div className="flex items-center gap-2">
         <img src="/task1/logo.png" alt="Logo" className="w-10 h-10" />
-        <div className="hidden sm:block text-white font-semibold text-lg">Wortionary</div>
+        <div className="hidden sm:block text-white font-semibold text-lg">
+          Wortionary
+        </div>
       </div>
 
       <div className="flex items-center gap-4">
@@ -108,7 +110,7 @@ function Header() {
 }
 
 export default function App() {
-  const [tags, setTags] = useState([
+  const [tags] = useState([
     "NFT",
     "Metaverse",
     "Sustainable",
@@ -118,7 +120,7 @@ export default function App() {
   ]);
 
   return (
-    <main className="bg-black min-h-screen text-white">
+    <main className="bg-black min-h-screen text-white pb-12">
       <Header />
       <BoxArea97 />
       <TagList title="Trending" tags={tags} />
